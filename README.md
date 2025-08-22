@@ -95,5 +95,5 @@ The component leverages the browser's ability to trigger downloads using a hidde
 
 To run the example app and test changes:
 
-1.  Navigate to the `template/streamlit_downloader` directory.
+1.  Navigate to the `streamlit_downloader` directory.
 2.  Run `streamlit run example.py`.
