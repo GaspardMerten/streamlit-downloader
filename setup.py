@@ -7,15 +7,19 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-downloader",
-    version="0.0.1",
+    version="0.0.3",
     author="Gaspard Merten",
     author_email="gaspard@norse.be",
     description="Streamlit component to download a file programmatically, without user input.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/your-username/streamlit-downloader", # Added a placeholder URL
     packages=setuptools.find_packages(),
     include_package_data=True,
+    # This is the key change to include the build directory
+    package_data={
+        "streamlit_downloader": ["template/build/**"]
+    },
     classifiers=[],
     python_requires=">=3.7",
     install_requires=[

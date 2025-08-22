@@ -32,12 +32,10 @@ function Downloader({args, disabled, theme}: ComponentProps): ReactElement {
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
-        Streamlit.setComponentValue(1);
     }
 
     useEffect(() => {
       triggerDownload().then();
-      Streamlit.setFrameHeight(0);
     }, []);
 
     return (

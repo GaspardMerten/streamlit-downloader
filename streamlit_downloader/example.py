@@ -1,3 +1,5 @@
+import time
+
 import streamlit as st
 from streamlit_downloader import downloader
 
@@ -7,20 +9,11 @@ from streamlit_downloader import downloader
 
 st.subheader("Download a file")
 
-# Could be a csv, or really anything.
-complete = downloader(
-    b'Hello world',
-    filename="hey.txt",
-    content_type="text/plain",
-)
-if complete:
-    st.write(complete)
-
-# Could be a csv, or really anything.
-complete2 = downloader(
-    b'Hello world2',
-    filename="hey.txt",
-    content_type="text/plain",
-)
-if complete2:
-    st.write(complete2)
+for i in range(10):
+    time.sleep(1)
+    # Could be a csv, or really anything.
+    complete = downloader(
+        (f'Hello world + {i}').encode('utf-8'),
+        filename=F"hey{i}.txt",
+        content_type="text/plain",
+    )
